@@ -3,8 +3,8 @@ import time
 
 
 
-marker = [' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']    
-competitor = 1    
+cursor = [' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']    
+adversary = 1    
 
 print("Enter name of player 1:")
 pl = input()
@@ -13,82 +13,82 @@ pll = input()
 
 Won = 1    
 Draw = -1    
-Still = 0    
+Ongoing = 0    
 Stop = 1    
 
    
-Match = Still    
-Mark = 'X'    
+Game = Ongoing    
+Check = 'X'    
    
 #For board   
 def board():    
-    print(" %c | %c | %c " % (marker[1],marker[2],marker[3]))    
+    print(" %c | %c | %c " % (cursor[1],cursor[2],cursor[3]))    
     print("___|___|___")    
-    print(" %c | %c | %c " % (marker[4],marker[5],marker[6]))    
+    print(" %c | %c | %c " % (cursor[4],cursor[5],cursor[6]))    
     print("___|___|___")    
-    print(" %c | %c | %c " % (marker[7],marker[8],marker[9]))    
+    print(" %c | %c | %c " % (cursor[7],cursor[8],cursor[9]))    
     print("   |   |   ")    
    
 #Check position   
 def CheckPosition(x):    
-    if(marker[x] == ' '):    
+    if(cursor[x] == ' '):    
         return True    
     else:    
         return False    
    
 #Tells state of the match   
 def getwinner():    
-    global Match
+    global Game
     #Vertically   
-    if(marker[1] == marker[4] and marker[4] == marker[7] and marker[1] != ' '):    
-        Match = Won    
-    elif(marker[2] == marker[5] and marker[5] == marker[8] and marker[2] != ' '):    
-        Match = Won    
-    elif(marker[3] == marker[6] and marker[6] == marker[9] and marker[3] != ' '):    
-        Match=Won    
+    if(cursor[1] == cursor[4] and cursor[4] == cursor[7] and cursor[1] != ' '):    
+        Game = Won    
+    elif(cursor[2] == cursor[5] and cursor[5] == cursor[8] and cursor[2] != ' '):    
+        Game = Won    
+    elif(cursor[3] == cursor[6] and cursor[6] == cursor[9] and cursor[3] != ' '):    
+        Game=Won    
     #Diagonally 
-    elif(marker[1] == marker[5] and marker[5] == marker[9] and marker[5] != ' '):    
-        Match = Won    
-    elif(marker[3] == marker[5] and marker[5] == marker[7] and marker[5] != ' '):    
-        Match=Won
-    elif(marker[1]!=' ' and marker[2]!=' ' and marker[3]!=' ' and marker[4]!=' ' and marker[5]!=' ' and marker[6]!=' ' and marker[7]!=' ' and marker[8]!=' ' and marker[9]!=' '):    
-        Match=Draw 
+    elif(cursor[1] == cursor[5] and cursor[5] == cursor[9] and cursor[5] != ' '):    
+        Game = Won    
+    elif(cursor[3] == cursor[5] and cursor[5] == cursor[7] and cursor[5] != ' '):    
+        Game=Won
+    elif(cursor[1]!=' ' and cursor[2]!=' ' and cursor[3]!=' ' and cursor[4]!=' ' and cursor[5]!=' ' and cursor[6]!=' ' and cursor[7]!=' ' and cursor[8]!=' ' and cursor[9]!=' '):    
+        Game=Draw 
     #Horizontally
-    elif(marker[1] == marker[2] and marker[2] == marker[3] and marker[1] != ' '):    
-        Match = Won    
-    elif(marker[4] == marker[5] and marker[5] == marker[6] and marker[4] != ' '):    
-        Match = Won    
-    elif(marker[7] == marker[8] and marker[8] == marker[9] and marker[7] != ' '):    
-        Match = Won    
+    elif(cursor[1] == cursor[2] and cursor[2] == cursor[3] and cursor[1] != ' '):    
+        Game = Won    
+    elif(cursor[4] == cursor[5] and cursor[5] == cursor[6] and cursor[4] != ' '):    
+        Game = Won    
+    elif(cursor[7] == cursor[8] and cursor[8] == cursor[9] and cursor[7] != ' '):    
+        Game = Won    
     else:            
-        Match=Still    
+        Game=Ongoing    
     
 
 print("%s [X] --- %s [O]\n\n" % (pl, pll))   
 print("Please Wait...")    
 time.sleep(3)    
-while(Match == Still):    
+while(Game == Ongoing):    
     os.system('cls')    
     board()    
-    if(competitor % 2 != 0):    
+    if(adversary % 2 != 0):    
         print("%s's chance" % pl)    
-        Mark = 'X'    
+        Check = 'X'    
     else:    
         print("%s's chance" % pll)    
-        Mark = 'O'    
+        Check = 'O'    
     choice = int(input("Enter the position between [1-9] where you want to mark : "))    
     if(CheckPosition(choice)):    
-        marker[choice] = Mark    
-        competitor+=1    
+        cursor[choice] = Check    
+        adversary+=1    
         getwinner()    
     
 os.system('cls')    
 board()    
-if(Match==Draw):    
-    print("Match Draw")    
-elif(Match==Won):    
-    competitor-=1    
-    if(competitor%2!=0):    
+if(Game==Draw):    
+    print("Game Draw")    
+elif(Game==Won):    
+    adversary-=1    
+    if(adversary%2!=0):    
         print("%s Won the match!" % pl)    
     else:    
         print("%s Won the match!" % pll)
@@ -98,3 +98,4 @@ print("                        GAME OVER\n")
 
 
 print("Give a star to this repo and follow Vinayak Pandey AKA Harpia-Vieillot")
+
