@@ -1,4 +1,4 @@
-# Discord Nitro Generator And Checker
+# Tic-Tac-Toe
   [![Stars](https://img.shields.io/github/stars/Harpia-Vieillot/Tic-Tac-Toe?style=flat-square&color=blue)](https://github.com/Harpia-Vieillot/Tic-Tac-Toe/stargazers)
   [![Forks](https://img.shields.io/github/forks/Harpia-Vieillot/Tic-Tac-Toe?style=flat-square&color=blue)](https://github.com/Harpia-Vieillot/Tic-Tac-Toe/fork)
 
