@@ -1,6 +1,6 @@
 # Discord Nitro Generator And Checker
-  [![Stars](https://img.shields.io/github/stars/Harpia-Vieillot/Discord-Nitro?style=flat-square&color=blue)](https://github.com/Harpia-Vieillot/Tic-Tac-Toe/stargazers)
-  [![Forks](https://img.shields.io/github/forks/Harpia-Vieillot/Discord-Nitro?style=flat-square&color=blue)](https://github.com/Harpia-Vieillot/Tic-Tac-Toe/fork)
+  [![Stars](https://img.shields.io/github/stars/Harpia-Vieillot/Tic-Tac-Toe?style=flat-square&color=blue)](https://github.com/Harpia-Vieillot/Tic-Tac-Toe/stargazers)
+  [![Forks](https://img.shields.io/github/forks/Harpia-Vieillot/Tic-Tac-Toe?style=flat-square&color=blue)](https://github.com/Harpia-Vieillot/Tic-Tac-Toe/fork)
 
 ### ⚙️ Rᴜɴ Oɴ Rᴇᴘʟɪᴛ
 
