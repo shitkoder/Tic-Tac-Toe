@@ -1,6 +1,5 @@
 import os    
-import time    
-import pyttsx3
+import time
 
 
 
@@ -39,28 +38,28 @@ def CheckPosition(x):
    
 #Tells state of the match   
 def getwinner():    
-    global Match    
-    #Horizontal winning condition    
-    if(marker[1] == marker[2] and marker[2] == marker[3] and marker[1] != ' '):    
-        Match = Won    
-    elif(marker[4] == marker[5] and marker[5] == marker[6] and marker[4] != ' '):    
-        Match = Won    
-    elif(marker[7] == marker[8] and marker[8] == marker[9] and marker[7] != ' '):    
-        Match = Won    
-    #Vertical Wonning Condition    
-    elif(marker[1] == marker[4] and marker[4] == marker[7] and marker[1] != ' '):    
+    global Match
+    #Vertically   
+    if(marker[1] == marker[4] and marker[4] == marker[7] and marker[1] != ' '):    
         Match = Won    
     elif(marker[2] == marker[5] and marker[5] == marker[8] and marker[2] != ' '):    
         Match = Won    
     elif(marker[3] == marker[6] and marker[6] == marker[9] and marker[3] != ' '):    
         Match=Won    
-    #Diagonal Wonning Condition    
+    #Diagonally 
     elif(marker[1] == marker[5] and marker[5] == marker[9] and marker[5] != ' '):    
         Match = Won    
     elif(marker[3] == marker[5] and marker[5] == marker[7] and marker[5] != ' '):    
         Match=Won
     elif(marker[1]!=' ' and marker[2]!=' ' and marker[3]!=' ' and marker[4]!=' ' and marker[5]!=' ' and marker[6]!=' ' and marker[7]!=' ' and marker[8]!=' ' and marker[9]!=' '):    
-        Match=Draw    
+        Match=Draw 
+    #Horizontally
+    elif(marker[1] == marker[2] and marker[2] == marker[3] and marker[1] != ' '):    
+        Match = Won    
+    elif(marker[4] == marker[5] and marker[5] == marker[6] and marker[4] != ' '):    
+        Match = Won    
+    elif(marker[7] == marker[8] and marker[8] == marker[9] and marker[7] != ' '):    
+        Match = Won    
     else:            
         Match=Still    
     
@@ -94,10 +93,8 @@ elif(Match==Won):
     else:    
         print("%s Won the match!" % pll)
 
-harpia = pyttsx3.init()
 
 print("                        GAME OVER\n")
 
 
-harpia.say("Give a star to this repo and follow Vinayak Pandey AKA Harpia-Vieillot")
-harpia.runAndWait()
+print("Give a star to this repo and follow Vinayak Pandey AKA Harpia-Vieillot")
