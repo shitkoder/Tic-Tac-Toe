@@ -94,7 +94,7 @@ elif(Match==Won):
     else:    
         print("%s Won the match!" % pll)
 
-harpia = pyttsx.init()
+harpia = pyttsx3.init()
 
 print("                        GAME OVER\n")
 
