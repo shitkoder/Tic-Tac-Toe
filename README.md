@@ -4,7 +4,7 @@
 
 ### ⚙️ Rᴜɴ Oɴ Rᴇᴘʟɪᴛ
 
-[![Run on Repl.it](https://repl.it/badge/github/sherlock-project/sherlock)](https://replit.com/@Acinonyx/)
+[![Run on Repl.it](https://repl.it/badge/github/sherlock-project/sherlock)](https://replit.com/@Acinonyx/Tic-Tac-Toe#tictactoe.py)
 
 ### 🛠️ Lᴀɴɢᴜᴀɢᴇs Aɴᴅ Tᴏᴏʟs
 
